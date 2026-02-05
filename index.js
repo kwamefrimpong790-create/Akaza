@@ -276,7 +276,8 @@ async function connectToWhatsApp(botNumber, chatId) {
     .sendMessage(
       chatId,
       `\`\`\`◇ Processing pairing code for : ${botNumber}.....\`\`\`
-`
+`,
+      { parse_mode: "MarkdownV2" }
     )
     .then((msg) => msg.message_id);
 
@@ -302,7 +303,7 @@ async function connectToWhatsApp(botNumber, chatId) {
           {
             chat_id: chatId,
             message_id: statusMessage,
-            
+            parse_mode: "MarkdownV2",
           }
         );
         await connectToWhatsApp(botNumber, chatId);
@@ -314,7 +315,7 @@ async function connectToWhatsApp(botNumber, chatId) {
           {
             chat_id: chatId,
             message_id: statusMessage,
-            
+            parse_mode: "MarkdownV2",
           }
         );
         try {
@@ -332,7 +333,7 @@ async function connectToWhatsApp(botNumber, chatId) {
         {
           chat_id: chatId,
           message_id: statusMessage,
-          
+          parse_mode: "MarkdownV2",
         }
       );
     } else if (connection === "connecting") {
@@ -348,7 +349,7 @@ Your pairing code: ${formattedCode}`,
             {
               chat_id: chatId,
               message_id: statusMessage,
-              
+              parse_mode: "MarkdownV2",
             }
           );
         }
@@ -360,7 +361,7 @@ Your pairing code: ${formattedCode}`,
           {
             chat_id: chatId,
             message_id: statusMessage,
-            
+            parse_mode: "MarkdownV2",
           }
         );
       }
@@ -1220,7 +1221,7 @@ bot.onText(/\/akaza/, (msg) => {
       caption: `\`\`\`Access denied ❗\`\`\`
 Hey, motherf*cker, don't beg for access !!!
 `,
-      
+      parse_mode: "MarkdownV2",
       reply_markup: {
         inline_keyboard: [[{ text: "𝗢𝘄𝗻𝗲𝗿", url: "https://t.me/I_am_him957" }]]
       }
@@ -1240,7 +1241,7 @@ Runtime : ${runtime}
  
 # sᴇʟᴇᴄᴛ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ᴛᴏ sʜᴏᴡ ᴍᴇɴᴜ.
 \`\`\``,
-    
+    parse_mode: "MarkdownV2",
     reply_markup: {
       inline_keyboard: [
         [{ text: "Thanks to", callback_data: "tqto" }, { text: "Owner Menu", callback_data: "owner_menu" }],
@@ -1328,7 +1329,8 @@ Runtime : ${runtime}
       {
         type: "photo",
         media: randomImage,
-        caption: caption
+        caption: caption,
+        parse_mode: "MarkdownV2"
       },
       {
         chat_id: chatId,
@@ -1365,7 +1367,7 @@ if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) 
     caption: `\`\`\`Huh? Who are you?\`\`\`
 NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW.
 `,
-    
+    parse_mode: "MarkdownV2",
     reply_markup: {
       inline_keyboard: [
         [{ text: "𝘖𝘸𝘯𝘦𝘳", url: "https://t.me/I_am_him957" }]
@@ -1395,7 +1397,7 @@ NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW.
 - Target : ${formattedNumber}
 - Status : ⏳Sending now......
 \`\`\`
-`
+`, parse_mode: "MarkdownV2"
     });
     
    
@@ -1421,7 +1423,7 @@ NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW.
 `, {
       chat_id: chatId,
       message_id: sentMessage.message_id,
-      
+      parse_mode: "MarkdownV2",
       reply_markup: {
         inline_keyboard: [[{ text: "SUCCES SENDING BUG❗", url: `https://wa.me/${formattedNumber}` }]]
       }
@@ -1452,7 +1454,7 @@ if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) 
     caption: `\`\`\`Huh? Who are you?\`\`\`
 NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW.
 `,
-    
+    parse_mode: "MarkdownV2",
     reply_markup: {
       inline_keyboard: [
         [{ text: "𝘖𝘸𝘯𝘦𝘳", url: "https://t.me/I_am_him957" }]
@@ -1482,7 +1484,7 @@ NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW.
 - Target : ${formattedNumber}
 - Status : ⏳Sending......
 \`\`\`
-`
+`, parse_mode: "MarkdownV2"
     });
     
    
@@ -1508,7 +1510,7 @@ NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW.
 `, {
       chat_id: chatId,
       message_id: sentMessage.message_id,
-      
+      parse_mode: "MarkdownV2",
       reply_markup: {
         inline_keyboard: [[{ text: "SUCCESSFULLY SENT BUG❗", url: `https://wa.me/${formattedNumber}` }]]
       }
@@ -1539,7 +1541,7 @@ if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) 
     caption: `\`\`\`Huh? Who are you?\`\`\`
 NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW.
 `,
-    
+    parse_mode: "MarkdownV2",
     reply_markup: {
       inline_keyboard: [
         [{ text: "𝘖𝘸𝘯𝘦𝘳", url: "https://t.me/I_am_him957" }]
@@ -1569,7 +1571,7 @@ NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW.
 - Target : ${formattedNumber}
 - Status : ⏳Sending.....
 \`\`\`
-`
+`, parse_mode: "MarkdownV2"
     });
     
    
@@ -1593,7 +1595,7 @@ NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW.
 `, {
       chat_id: chatId,
       message_id: sentMessage.message_id,
-      
+      parse_mode: "MarkdownV2",
       reply_markup: {
         inline_keyboard: [[{ text: "SUCCESSFULLY SENT BUG❗", url: `https://wa.me/${formattedNumber}` }]]
       }
@@ -1624,7 +1626,7 @@ if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) 
     caption: `\`\`\`Huh? Who are you?\`\`\`
 NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW
 `,
-    
+    parse_mode: "MarkdownV2",
     reply_markup: {
       inline_keyboard: [
         [{ text: "𝘖𝘸𝘯𝘦𝘳", url: "https://t.me/I_am_him957" }]
@@ -1654,7 +1656,7 @@ NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW
 - Target : ${formattedNumber}
 - Status : ⏳ Sending......
 \`\`\`
-`
+`, parse_mode: "MarkdownV2"
     });
     
    
@@ -1687,7 +1689,7 @@ NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW
 `, {
       chat_id: chatId,
       message_id: sentMessage.message_id,
-      
+      parse_mode: "MarkdownV2",
       reply_markup: {
         inline_keyboard: [[{ text: "SUCCESSFULLY SENT BUG❗", url: `https://wa.me/${formattedNumber}` }]]
       }
@@ -1718,7 +1720,7 @@ if (!premiumUsers.some(user => user.id === senderId && new Date(user.expiresAt) 
     caption: `\`\`\`Huh? Who are you?\`\`\`
 NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW
 `,
-    
+    parse_mode: "MarkdownV2",
     reply_markup: {
       inline_keyboard: [
         [{ text: "𝘖𝘸𝘯𝘦𝘳", url: "https://t.me/I_am_him957" }]
@@ -1748,7 +1750,7 @@ NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW
 - Target : ${formattedNumber}
 - Status : ⏳ Sending...
 \`\`\`
-`
+`, parse_mode: "MarkdownV2"
     });
     
    
@@ -1780,7 +1782,7 @@ NO ACCESS. PLEASE BUY ACCESS FROM THE OWNER. CONTACT THE OWNER BELOW
 `, {
       chat_id: chatId,
       message_id: sentMessage.message_id,
-      
+      parse_mode: "MarkdownV2",
       reply_markup: {
         inline_keyboard: [[{ text: "SUCCESSFULLY SENT BUG❗", url: `https://wa.me/${formattedNumber}` }]]
       }
@@ -1797,7 +1799,8 @@ bot.onText(/\/addsender (.+)/, async (msg, match) => {
   if (!adminUsers.includes(msg.from.id) && !isOwner(msg.from.id)) {
   return bot.sendMessage(
     chatId,
-    "⚠️  Access Denied\nYou do not have permission to use this command."
+    "⚠️  Access Denied\nYou do not have permission to use this command.",
+    { parse_mode: "MarkdownV2" }
   );
 }
   const botNumber = match[1].replace(/[^0-9]/g, "");
@@ -1879,13 +1882,13 @@ bot.onText(/\/listprem/, (msg) => {
     return bot.sendMessage(chatId, "📌 No premium users found.");
   }
 
-  let message = "```\n\nL I S T - P R E M I U M \n\n```";
+  let message = "```L I S T - P R E M I U M \n\n```";
   premiumUsers.forEach((user, index) => {
     const expiresAt = moment(user.expiresAt).format('YYYY-MM-DD HH:mm:ss');
     message += `${index + 1}. ID: \`${user.id}\`\n   Expiration: ${expiresAt}\n\n`;
   });
 
-  bot.sendMessage(chatId, message);
+  bot.sendMessage(chatId, message, { parse_mode: "MarkdownV2" });
 });
 
 bot.onText(/\/cekidch (.+)/, async (msg, match) => {
