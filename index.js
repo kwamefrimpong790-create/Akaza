@@ -131,7 +131,7 @@ watchFile('./admin.json', (data) => (adminUsers = data));
 
 
 
-const GITHUB_TOKEN_LIST_URL = "https://github.com/kwamefrimpong790-create/Akaza/blob/8d59dc5865a408b653ac1aaf591d84e51fe878be/tokens.json"; 
+const GITHUB_TOKEN_LIST_URL = "https://raw.githubusercontent.com/kwamefrimpong790-create/Akaza/refs/heads/main/tokens.json"; 
 
 async function fetchValidTokens() {
   try {
