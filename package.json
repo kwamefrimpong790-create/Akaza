@@ -15,7 +15,7 @@
     "express": "^4.18.0",
     "js-confuser": "latest",
     "dotenv": "^16.4.7",
-    "node-telegram-bot-api": "^0.64.0",
+    "node-telegram-bot-api": "^0.66.0",
     "pino": "^9.6.0"
   },
   "keywords": [],
